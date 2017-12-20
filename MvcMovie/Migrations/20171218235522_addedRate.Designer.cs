@@ -11,9 +11,10 @@ using System;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    partial class MvcMovieContextModelSnapshot : ModelSnapshot
+    [Migration("20171218235522_addedRate")]
+    partial class addedRate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,7 +34,7 @@ namespace MvcMovie.Migrations
 
                     b.Property<string>("Rating")
                         .IsRequired()
-                        .HasMaxLength(15);
+                        .HasMaxLength(5);
 
                     b.Property<DateTime>("ReleaseDate");
 
